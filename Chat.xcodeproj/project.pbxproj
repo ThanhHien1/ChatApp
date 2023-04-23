@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		246BCAF529F56BC7000CDEA7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2438760E29E540FF00E39295 /* GoogleService-Info.plist */; };
 		246BCAF629F56BC7000CDEA7 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243875FD29E5406400E39295 /* Splash.storyboard */; };
 		246BCAF729F56BC7000CDEA7 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2438761D29E5439B00E39295 /* Auth.storyboard */; };
 		246BCAF829F56BC7000CDEA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2438760029E5406500E39295 /* Assets.xcassets */; };
@@ -25,6 +24,13 @@
 		24F3E43429F56B9300901273 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243875F729E5406400E39295 /* AppDelegate.swift */; };
 		24F3E43529F56B9300901273 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243875F929E5406400E39295 /* SceneDelegate.swift */; };
 		24F3E43729F56B9D00901273 /* Pods_Chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F3E43629F56B9D00901273 /* Pods_Chat.framework */; };
+		98B6449629F57EBD002262F2 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B6449529F57EBD002262F2 /* SplashViewModel.swift */; };
+		98B6449929F581F1002262F2 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B6449829F581F1002262F2 /* LoginController.swift */; };
+		98B6449D29F5822F002262F2 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98B6449C29F5822F002262F2 /* Login.storyboard */; };
+		98B6449F29F583C0002262F2 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B6449E29F583C0002262F2 /* LoginViewModel.swift */; };
+		98B644A229F585A6002262F2 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B644A129F585A6002262F2 /* HomeController.swift */; };
+		98B644A429F585AE002262F2 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98B644A329F585AE002262F2 /* Home.storyboard */; };
+		98B644A829F58968002262F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98B644A729F58968002262F2 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +42,6 @@
 		2438760029E5406500E39295 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2438760329E5406500E39295 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2438760529E5406500E39295 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2438760E29E540FF00E39295 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2438761529E542C800E39295 /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		2438761729E5432B00E39295 /* UiStoryBoardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiStoryBoardExtension.swift; sourceTree = "<group>"; };
 		2438761B29E5438D00E39295 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +56,13 @@
 		24F3E43629F56B9D00901273 /* Pods_Chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69FAD7FBE8C13DC4277057E6 /* Pods-Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat.debug.xcconfig"; path = "Target Support Files/Pods-Chat/Pods-Chat.debug.xcconfig"; sourceTree = "<group>"; };
 		96D54E300E5EA8CDE4D979BB /* Pods-Chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat.release.xcconfig"; path = "Target Support Files/Pods-Chat/Pods-Chat.release.xcconfig"; sourceTree = "<group>"; };
+		98B6449529F57EBD002262F2 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		98B6449829F581F1002262F2 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		98B6449C29F5822F002262F2 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		98B6449E29F583C0002262F2 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		98B644A129F585A6002262F2 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		98B644A329F585AE002262F2 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		98B644A729F58968002262F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EBDE4459DDD22AE153D95468 /* Pods_Chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -69,8 +81,8 @@
 		243875EB29E5406400E39295 = {
 			isa = PBXGroup;
 			children = (
+				98B644A729F58968002262F2 /* GoogleService-Info.plist */,
 				24F3E42229F5670A00901273 /* Chat */,
-				2438760E29E540FF00E39295 /* GoogleService-Info.plist */,
 				2466AB7D29ED13A700F10301 /* Service */,
 				24EAB96B29EC535F000799AE /* Protocol */,
 				24EAB96129EC34FE000799AE /* Enum */,
@@ -114,7 +126,9 @@
 		2438760D29E540E600E39295 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2438761929E5436300E39295 /* Main */,
+				98B644A029F58592002262F2 /* Home */,
+				98B6449729F581AF002262F2 /* Login */,
+				2438761929E5436300E39295 /* Splash */,
 				2438761A29E5437200E39295 /* Auth */,
 			);
 			path = View;
@@ -132,13 +146,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		2438761929E5436300E39295 /* Main */ = {
+		2438761929E5436300E39295 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
 				243875FD29E5406400E39295 /* Splash.storyboard */,
 				243875FB29E5406400E39295 /* SplashController.swift */,
+				98B6449529F57EBD002262F2 /* SplashViewModel.swift */,
 			);
-			path = Main;
+			path = Splash;
 			sourceTree = "<group>";
 		};
 		2438761A29E5437200E39295 /* Auth */ = {
@@ -188,6 +203,25 @@
 				96D54E300E5EA8CDE4D979BB /* Pods-Chat.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		98B6449729F581AF002262F2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				98B6449829F581F1002262F2 /* LoginController.swift */,
+				98B6449C29F5822F002262F2 /* Login.storyboard */,
+				98B6449E29F583C0002262F2 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		98B644A029F58592002262F2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				98B644A129F585A6002262F2 /* HomeController.swift */,
+				98B644A329F585AE002262F2 /* Home.storyboard */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		B1941930996BAE086CF91BDF /* Frameworks */ = {
@@ -261,11 +295,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				246BCAF529F56BC7000CDEA7 /* GoogleService-Info.plist in Resources */,
+				98B644A429F585AE002262F2 /* Home.storyboard in Resources */,
 				246BCAF629F56BC7000CDEA7 /* Splash.storyboard in Resources */,
+				98B6449D29F5822F002262F2 /* Login.storyboard in Resources */,
 				246BCAF729F56BC7000CDEA7 /* Auth.storyboard in Resources */,
 				246BCAF829F56BC7000CDEA7 /* Assets.xcassets in Resources */,
 				246BCAFB29F56BC7000CDEA7 /* LaunchScreen.storyboard in Resources */,
+				98B644A829F58968002262F2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,10 +379,14 @@
 				24F3E42F29F56B9300901273 /* EncoderExtension.swift in Sources */,
 				24F3E43029F56B9300901273 /* SplashController.swift in Sources */,
 				24F3E43129F56B9300901273 /* AuthViewModel.swift in Sources */,
+				98B6449F29F583C0002262F2 /* LoginViewModel.swift in Sources */,
+				98B6449629F57EBD002262F2 /* SplashViewModel.swift in Sources */,
 				24F3E43229F56B9300901273 /* AuthViewController.swift in Sources */,
 				24F3E43329F56B9300901273 /* ObjectUser.swift in Sources */,
+				98B644A229F585A6002262F2 /* HomeController.swift in Sources */,
 				24F3E43429F56B9300901273 /* AppDelegate.swift in Sources */,
 				24F3E43529F56B9300901273 /* SceneDelegate.swift in Sources */,
+				98B6449929F581F1002262F2 /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

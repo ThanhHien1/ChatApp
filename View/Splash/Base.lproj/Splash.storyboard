@@ -16,23 +16,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="yDW-Hw-k5j">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="yDW-Hw-k5j">
+                                <rect key="frame" x="0.0" y="-32" width="393" height="898"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="wtS-Pa-mMA">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="wtS-Pa-mMA">
                                 <rect key="frame" x="74" y="319" width="268" height="128"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yDW-Hw-k5j" secondAttribute="trailing" id="6m3-VG-AXt"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="yDW-Hw-k5j" secondAttribute="bottom" constant="-48" id="5Dc-dE-wrV"/>
+                            <constraint firstItem="yDW-Hw-k5j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6Jg-UB-bSO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wtS-Pa-mMA" secondAttribute="bottom" constant="371" id="Ppk-gK-YLN"/>
                             <constraint firstItem="wtS-Pa-mMA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="260" id="Y5W-CK-kjJ"/>
-                            <constraint firstItem="yDW-Hw-k5j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cFy-jK-sVh"/>
+                            <constraint firstItem="yDW-Hw-k5j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="goB-zS-Urp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wtS-Pa-mMA" secondAttribute="trailing" constant="51" id="gs4-nW-VgG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yDW-Hw-k5j" secondAttribute="bottom" id="jQC-TV-BFh"/>
-                            <constraint firstItem="yDW-Hw-k5j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rQl-iQ-rNl"/>
+                            <constraint firstItem="yDW-Hw-k5j" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-91" id="jr5-2F-VgQ"/>
                             <constraint firstItem="wtS-Pa-mMA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="74" id="tN7-W5-MM0"/>
                         </constraints>
                     </view>
@@ -43,8 +43,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Background.png" width="800" height="1600"/>
-        <image name="logo.png" width="504" height="160"/>
+        <image name="Background" width="800" height="1600"/>
+        <image name="logo" width="504" height="160"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
