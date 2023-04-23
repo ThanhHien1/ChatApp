@@ -11,8 +11,6 @@
 		246BCAF629F56BC7000CDEA7 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243875FD29E5406400E39295 /* Splash.storyboard */; };
 		246BCAF729F56BC7000CDEA7 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2438761D29E5439B00E39295 /* Auth.storyboard */; };
 		246BCAF829F56BC7000CDEA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2438760029E5406500E39295 /* Assets.xcassets */; };
-		246BCAF929F56BC7000CDEA7 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2438761229E5413600E39295 /* logo.png */; };
-		246BCAFA29F56BC7000CDEA7 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 2438761029E5412200E39295 /* Background.png */; };
 		246BCAFB29F56BC7000CDEA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2438760229E5406500E39295 /* LaunchScreen.storyboard */; };
 		24F3E42A29F56B9300901273 /* FirebaseEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EAB96929EC4BF3000799AE /* FirebaseEnum.swift */; };
 		24F3E42B29F56B9300901273 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2438761529E542C800E39295 /* NSObjectExtension.swift */; };
@@ -39,8 +37,6 @@
 		2438760329E5406500E39295 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2438760529E5406500E39295 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2438760E29E540FF00E39295 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		2438761029E5412200E39295 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Background.png; path = ../../../Downloads/Background.png; sourceTree = "<group>"; };
-		2438761229E5413600E39295 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../Downloads/logo.png; sourceTree = "<group>"; };
 		2438761529E542C800E39295 /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		2438761729E5432B00E39295 /* UiStoryBoardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiStoryBoardExtension.swift; sourceTree = "<group>"; };
 		2438761B29E5438D00E39295 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -102,8 +98,6 @@
 				243875F729E5406400E39295 /* AppDelegate.swift */,
 				243875F929E5406400E39295 /* SceneDelegate.swift */,
 				2438760029E5406500E39295 /* Assets.xcassets */,
-				2438761229E5413600E39295 /* logo.png */,
-				2438761029E5412200E39295 /* Background.png */,
 				2438760229E5406500E39295 /* LaunchScreen.storyboard */,
 			);
 			path = Application;
@@ -271,8 +265,6 @@
 				246BCAF629F56BC7000CDEA7 /* Splash.storyboard in Resources */,
 				246BCAF729F56BC7000CDEA7 /* Auth.storyboard in Resources */,
 				246BCAF829F56BC7000CDEA7 /* Assets.xcassets in Resources */,
-				246BCAF929F56BC7000CDEA7 /* logo.png in Resources */,
-				246BCAFA29F56BC7000CDEA7 /* Background.png in Resources */,
 				246BCAFB29F56BC7000CDEA7 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

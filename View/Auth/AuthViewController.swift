@@ -21,27 +21,5 @@ class AuthViewController: UIViewController {
 }
 
 extension AuthViewController {
-//    @IBAction func register(_ sender: Any) {
-//           guard let name = tfName.text, let email = tfEmail.text, let password = tfPassword.text else {
-//               return
-//           }
-//           guard !name.isEmpty else {
-//               //separatorViews.filter({$0.tag == 2}).first?.backgroundColor = .red
-//               return
-//           }
-//           guard email.isValidEmail() else {
-//               //separatorViews.filter({$0.tag == 3}).first?.backgroundColor = .red
-//               return
-//           }
-//           guard password.count > 5 else {
-//               //separatorViews.filter({$0.tag == 4}).first?.backgroundColor = .red
-//               return
-//           }
-////           view.endEditing(true)
-//           //ThemeService.showLoading(true)
-//           viewModel.register(name: name, email: email, password: password, profilePic: selectedImage, complete: {[weak self ] in self?.showAlert()}, error: {[weak self] message in self?.dismiss(animated: true)})
-//       }
-
-    
     
 }
