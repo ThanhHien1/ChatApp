@@ -6,9 +6,17 @@
 //
 
 import Foundation
+import FirebaseAuth
 
-class AuthVM {
-    func register() {
+class AuthViewModel {
+    func register(_ name: String, _ email: String, _ password: String, omCompleted: @escaping () -> Void, onError: @escaping (String) -> Void) {
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            if (error != nil) {
+                onError(error?.localizedDescription ?? "")
+            } else {
+                omCompleted()
+            }
+        }
         
     }
 }

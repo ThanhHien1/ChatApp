@@ -22,6 +22,14 @@
                                     <constraint firstAttribute="height" constant="996" id="8Se-Km-5ZJ"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KgP-xH-vw1">
+                                <rect key="frame" x="10" y="-77" width="167" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="qDM-kB-su4"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                            </button>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZb-aO-Vd1">
                                 <rect key="frame" x="30" y="139" width="333" height="370"/>
                                 <subviews>
@@ -171,16 +179,32 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODj-rr-Wrp">
+                                <rect key="frame" x="113" y="742" width="167" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="iO7-vx-B39"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Register">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="viewRegister:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5NT-mq-3jc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PQA-vC-Ya9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="Pr8-Bq-FFt" secondAttribute="bottom" constant="-91" id="4rM-HC-NVT"/>
                             <constraint firstItem="PQA-vC-Ya9" firstAttribute="trailing" secondItem="lZb-aO-Vd1" secondAttribute="trailing" constant="30" id="AHk-mq-AKH"/>
+                            <constraint firstItem="ODj-rr-Wrp" firstAttribute="leading" secondItem="PQA-vC-Ya9" secondAttribute="leading" constant="113" id="EVS-0S-Gba"/>
                             <constraint firstItem="PQA-vC-Ya9" firstAttribute="bottom" secondItem="lZb-aO-Vd1" secondAttribute="bottom" constant="309" id="GZ2-rL-9xe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Pr8-Bq-FFt" secondAttribute="trailing" constant="-83" id="IYu-u7-xvE"/>
+                            <constraint firstItem="PQA-vC-Ya9" firstAttribute="bottom" secondItem="ODj-rr-Wrp" secondAttribute="bottom" constant="36" id="MWz-Pd-aRM"/>
                             <constraint firstItem="lZb-aO-Vd1" firstAttribute="leading" secondItem="PQA-vC-Ya9" secondAttribute="leading" constant="30" id="OM6-PA-DeP"/>
                             <constraint firstItem="lZb-aO-Vd1" firstAttribute="top" secondItem="PQA-vC-Ya9" secondAttribute="top" constant="80" id="akT-2k-ujn"/>
+                            <constraint firstItem="ODj-rr-Wrp" firstAttribute="centerX" secondItem="lZb-aO-Vd1" secondAttribute="centerX" id="l5t-Wt-p7t"/>
                             <constraint firstItem="Pr8-Bq-FFt" firstAttribute="leading" secondItem="PQA-vC-Ya9" secondAttribute="leading" id="ogu-S7-lhg"/>
                         </constraints>
                     </view>
