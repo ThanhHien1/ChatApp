@@ -21,7 +21,7 @@ class SplashController: UIViewController {
     
     private func observerViewModel(){
         viewModel.initialDataSplash {[weak self] in
-            let vc = UIStoryboard.initial(storyboard: .login)
+            let vc = UIStoryboard.initial(storyboard: .auth)
             vc.modalPresentationStyle = .fullScreen
             self?.present(vc, animated: true)
         }

@@ -34,3 +34,11 @@ class LoginController: UIViewController {
         })
     }
 }
+
+extension LoginController {
+    @IBAction func viewRegister(_ sender: Any) {
+        let vc = UIStoryboard.initial(storyboard: .auth)
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+    }
+}
