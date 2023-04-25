@@ -7,14 +7,14 @@
 
 import UIKit
 
-class AuthViewController: UIViewController {
+class RegisterViewController: UIViewController {
     @IBOutlet weak var imgRegister: UIImageView!
     @IBOutlet weak var tfName: UITextField!
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var indicatorRegister: UIActivityIndicatorView!
     
-    let viewModel = AuthViewModel()
+    let viewModel = RegisteViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,19 +23,20 @@ class AuthViewController: UIViewController {
 
     @IBAction func onRegister(_ sender: Any) {
         guard let name = tfName.text, name.count >= 1 else {
-            showAlert(message: "Enter name")
+            showAlert(title: "Erorr", message: "Enter name")
             return
            }
         guard let email = tfEmail.text, email.count >= 1 else {
-            showAlert(message: "Enter email")
+            showAlert(title: "Erorr", message: "Enter email")
             return
            }
         guard let password = tfPassword.text, password.count >= 6 else {
-            showAlert(message: "Passwords must be at least 6 characters")
+            showAlert(title: "Erorr", message: "Passwords must be at least 6 characters")
             return
            }
         indicatorRegister.isHidden = false
         viewModel.register(name, email, password, omCompleted: {[weak self] in
+            self?.indicatorRegister.isHidden = true
             let vc = UIStoryboard.initial(storyboard: .home)
             vc.modalPresentationStyle = .fullScreen
             self?.present(vc, animated: true)
@@ -46,20 +47,12 @@ class AuthViewController: UIViewController {
     }
 }
 
-extension AuthViewController {
-
+extension RegisterViewController {
+    
     @IBAction func switchView(_ sender: Any) {
             let vc = UIStoryboard.initial(storyboard: .login)
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true)
-        
-    }
-    
-    func showAlert(message: String) {
-        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(okAction)
-        present(alertController, animated: true, completion: nil)
     }
 }
 
