@@ -9,19 +9,26 @@ import UIKit
 
 class LoginController: UIViewController {
     private let viewModel = LoginViewModel()
-
+    
+    private var selectedImage : UIImage?
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var edtPassword: UITextField!
     @IBOutlet weak var edtEmail: UITextField!
     @IBOutlet weak var btnLogin: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         indicator.isHidden = true
     }
     
     @IBAction func onLogin(_ sender: Any) {
-        guard let email = edtEmail.text else {return}
-        guard let password = edtPassword.text else {return}
+        guard let email = edtEmail.text else {
+            showAlert(title: "Erorr", message: "Enter email")
+            return
+        }
+        guard let password = edtPassword.text else {showAlert(title: "Erorr", message: "Enter password")
+            return
+        }
         indicator.isHidden = false
         viewModel.login(email, password, onCompleted: { [weak self] in
             self?.indicator.isHidden = true
@@ -37,7 +44,7 @@ class LoginController: UIViewController {
 
 extension LoginController {
     @IBAction func viewRegister(_ sender: Any) {
-        let vc = UIStoryboard.initial(storyboard: .auth)
+        let vc = UIStoryboard.initial(storyboard: .register)
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }
