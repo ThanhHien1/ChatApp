@@ -19,11 +19,10 @@
 		24D67EA429FAB0CB00959E31 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D67EA129FAB0CB00959E31 /* RegisterViewModel.swift */; };
 		24D67EA629FAB12100959E31 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D67EA529FAB12000959E31 /* UIViewControllerExtension.swift */; };
 		24D67EA829FAB16B00959E31 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D67EA729FAB16B00959E31 /* User.swift */; };
+		24D67EAB29FAB91600959E31 /* ImagePickService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D67EA929FAB91600959E31 /* ImagePickService.swift */; };
 		24F3E42A29F56B9300901273 /* FirebaseEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EAB96929EC4BF3000799AE /* FirebaseEnum.swift */; };
 		24F3E42B29F56B9300901273 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2438761529E542C800E39295 /* NSObjectExtension.swift */; };
 		24F3E42C29F56B9300901273 /* UiStoryBoardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2438761729E5432B00E39295 /* UiStoryBoardExtension.swift */; };
-		24F3E42D29F56B9300901273 /* UImageExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466AB7E29ED155F00F10301 /* UImageExtention.swift */; };
-		24F3E42E29F56B9300901273 /* OptionalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466AB8029ED163800F10301 /* OptionalExtension.swift */; };
 		24F3E42F29F56B9300901273 /* EncoderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D4B6A329F2F39500FFB303 /* EncoderExtension.swift */; };
 		24F3E43029F56B9300901273 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243875FB29E5406400E39295 /* SplashController.swift */; };
 		24F3E43329F56B9300901273 /* ObjectUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24391ED529E85DAA00FC2B82 /* ObjectUser.swift */; };
@@ -50,8 +49,6 @@
 		2438761529E542C800E39295 /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		2438761729E5432B00E39295 /* UiStoryBoardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiStoryBoardExtension.swift; sourceTree = "<group>"; };
 		24391ED529E85DAA00FC2B82 /* ObjectUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectUser.swift; sourceTree = "<group>"; };
-		2466AB7E29ED155F00F10301 /* UImageExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UImageExtention.swift; sourceTree = "<group>"; };
-		2466AB8029ED163800F10301 /* OptionalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalExtension.swift; sourceTree = "<group>"; };
 		247C1D2C29F63ADB00EC4166 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		24D4B6A329F2F39500FFB303 /* EncoderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncoderExtension.swift; sourceTree = "<group>"; };
 		24D67E9829FAB0C000959E31 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -62,6 +59,7 @@
 		24D67EA129FAB0CB00959E31 /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		24D67EA529FAB12000959E31 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		24D67EA729FAB16B00959E31 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		24D67EA929FAB91600959E31 /* ImagePickService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickService.swift; sourceTree = "<group>"; };
 		24EAB96929EC4BF3000799AE /* FirebaseEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseEnum.swift; sourceTree = "<group>"; };
 		24F3E42829F56B7500901273 /* Pods_Chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F3E43629F56B9D00901273 /* Pods_Chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,7 +92,6 @@
 				247C1D2C29F63ADB00EC4166 /* GoogleService-Info.plist */,
 				24F3E42229F5670A00901273 /* Chat */,
 				2466AB7D29ED13A700F10301 /* Service */,
-				24EAB96B29EC535F000799AE /* Protocol */,
 				24EAB96129EC34FE000799AE /* Enum */,
 				2438761429E5429A00E39295 /* Extension */,
 				2438760D29E540E600E39295 /* View */,
@@ -152,8 +149,6 @@
 				24D67EA529FAB12000959E31 /* UIViewControllerExtension.swift */,
 				2438761529E542C800E39295 /* NSObjectExtension.swift */,
 				2438761729E5432B00E39295 /* UiStoryBoardExtension.swift */,
-				2466AB7E29ED155F00F10301 /* UImageExtention.swift */,
-				2466AB8029ED163800F10301 /* OptionalExtension.swift */,
 				24D4B6A329F2F39500FFB303 /* EncoderExtension.swift */,
 			);
 			path = Extension;
@@ -172,6 +167,7 @@
 		2466AB7D29ED13A700F10301 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				24D67EA929FAB91600959E31 /* ImagePickService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -202,13 +198,6 @@
 				24EAB96929EC4BF3000799AE /* FirebaseEnum.swift */,
 			);
 			path = Enum;
-			sourceTree = "<group>";
-		};
-		24EAB96B29EC535F000799AE /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocol;
 			sourceTree = "<group>";
 		};
 		24F3E42229F5670A00901273 /* Chat */ = {
@@ -398,10 +387,9 @@
 				24F3E42A29F56B9300901273 /* FirebaseEnum.swift in Sources */,
 				24F3E42B29F56B9300901273 /* NSObjectExtension.swift in Sources */,
 				24F3E42C29F56B9300901273 /* UiStoryBoardExtension.swift in Sources */,
-				24F3E42D29F56B9300901273 /* UImageExtention.swift in Sources */,
-				24F3E42E29F56B9300901273 /* OptionalExtension.swift in Sources */,
 				24F3E42F29F56B9300901273 /* EncoderExtension.swift in Sources */,
 				24F3E43029F56B9300901273 /* SplashController.swift in Sources */,
+				24D67EAB29FAB91600959E31 /* ImagePickService.swift in Sources */,
 				24D67EA429FAB0CB00959E31 /* RegisterViewModel.swift in Sources */,
 				24D67EA829FAB16B00959E31 /* User.swift in Sources */,
 				98B6449F29F583C0002262F2 /* LoginViewModel.swift in Sources */,

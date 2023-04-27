@@ -20,17 +20,15 @@ class SplashController: UIViewController {
     }
     
     private func observerViewModel(){
-        viewModel.initialDataSplash {[weak self] in
-            if self?.viewModel.CheckLogin() ?? false {
-                let vc = UIStoryboard.initial(storyboard: .home)
-                vc.modalPresentationStyle = .fullScreen
-                self?.present(vc, animated: true)
-            } else {
-                let vc = UIStoryboard.initial(storyboard: .register)
-                vc.modalPresentationStyle = .fullScreen
-                self?.present(vc, animated: true)
-            }
-        }
+        viewModel.initialDataSplash(onMoveToRegister: {
+            let vc = UIStoryboard.initial(storyboard: .login)
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+        }, onMoveToLogin: {
+            let vc = UIStoryboard.initial(storyboard: .register)
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+        })
         
     }
 }

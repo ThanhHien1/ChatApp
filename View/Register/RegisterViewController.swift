@@ -17,10 +17,16 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate 
     @IBOutlet weak var btChooseImage: UIButton!
     let viewModel = RegisteViewModel()
     private var selectedImage: UIImage?
+    private let imageService = ImagePickService()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         indicatorRegister.isHidden = true
+        imageService.onPickerCompleted = {image in
+            self.selectedImage = image
+            self.imgRegister.image = image
+        }
     }
     
     @IBAction func onRegister(_ sender: Any) {
@@ -58,21 +64,7 @@ extension RegisterViewController {
     
     // upload image
     @IBAction func upLoadImage(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
-        present(imagePicker, animated: true)
+        imageService.sourceType = .photoLibrary
+        present(imageService, animated: true)
     }
-    
-    func imagePickerController(_ picker : UIImagePickerController,didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        picker.dismiss(animated: true, completion: nil)
-        guard let image = info[.originalImage] as? UIImage else {return}
-        imgRegister.image = image
-        selectedImage = image
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion: nil)
-    }
-    
 }

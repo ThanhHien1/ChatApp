@@ -2,7 +2,7 @@
 //  HomeController.swift
 //  Chat
 //
-//  Created by Vo Duc Phong on 23/04/2023.
+//  Created by Thanh Hien on 23/04/2023.
 //
 
 import UIKit

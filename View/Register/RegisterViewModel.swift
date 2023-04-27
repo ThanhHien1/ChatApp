@@ -24,15 +24,10 @@ class RegisteViewModel {
                         self.saveUser(user: user) {
                             onCompleted()
                         } onError: { err in
-                            onError("Error during registration: \(String(describing: error?.localizedDescription))")
+                            onError("Error during registration: \(String(describing: err))")
                         }
-                    case .failure(let error):
-                        let user = User(name: name, email: email, password: password)
-                        self.saveUser(user: user) {
-                            onCompleted()
-                        } onError: { err in
-                            onError("Error during registration: \(error.localizedDescription)")
-                        }
+                    case .failure(let err):
+                        onError("Error during registration: \(String(describing: err))")
                     }
                 }
                 

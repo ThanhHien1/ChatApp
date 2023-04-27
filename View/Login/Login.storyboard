@@ -22,14 +22,6 @@
                                     <constraint firstAttribute="height" constant="996" id="8Se-Km-5ZJ"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KgP-xH-vw1">
-                                <rect key="frame" x="10" y="-77" width="167" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="qDM-kB-su4"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Login"/>
-                            </button>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lZb-aO-Vd1">
                                 <rect key="frame" x="30" y="139" width="333" height="370"/>
                                 <subviews>
