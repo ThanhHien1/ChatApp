@@ -24,6 +24,9 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHf-Sg-z1C">
                                         <rect key="frame" x="131.66666666666666" y="15" width="70" height="70"/>
+                                        <connections>
+                                            <action selector="upLoadImage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mhe-Dp-0ht"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JDa-x1-pBf">
                                         <rect key="frame" x="131.66666666666666" y="16" width="70" height="68.666666666666671"/>
@@ -236,7 +239,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imgRegister" destination="JDa-x1-pBf" id="aMf-oc-05B"/>
+                        <outlet property="btChooseImage" destination="IHf-Sg-z1C" id="Yg6-Qu-vVB"/>
+                        <outlet property="imgRegister" destination="JDa-x1-pBf" id="iOW-lo-K8U"/>
                         <outlet property="indicatorRegister" destination="TMu-xC-UBJ" id="P5u-Ah-tCG"/>
                         <outlet property="tfEmail" destination="P3x-1Q-viX" id="uLi-te-9T3"/>
                         <outlet property="tfName" destination="k7c-sz-kv5" id="kB5-TH-fvh"/>

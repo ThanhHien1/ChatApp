@@ -1,4 +1,4 @@
-//
+
 //  ViewController.swift
 //  Chat
 //
@@ -20,12 +20,16 @@ class SplashController: UIViewController {
     }
     
     private func observerViewModel(){
-        viewModel.initialDataSplash {[weak self] in
-            let vc = UIStoryboard.initial(storyboard: .auth)
+        viewModel.initialDataSplash(onMoveToRegister: {
+            let vc = UIStoryboard.initial(storyboard: .login)
             vc.modalPresentationStyle = .fullScreen
-            self?.present(vc, animated: true)
-        }
+            self.present(vc, animated: true)
+        }, onMoveToLogin: {
+            let vc = UIStoryboard.initial(storyboard: .register)
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+        })
+        
     }
-    
 }
 

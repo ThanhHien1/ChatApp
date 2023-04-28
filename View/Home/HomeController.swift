@@ -2,7 +2,7 @@
 //  HomeController.swift
 //  Chat
 //
-//  Created by Vo Duc Phong on 23/04/2023.
+//  Created by Thanh Hien on 23/04/2023.
 //
 
 import UIKit
@@ -26,4 +26,9 @@ class HomeController: UIViewController {
     }
     */
 
+    @IBAction func onProfile(_ sender: Any) {
+        let vc = UIStoryboard.initial(storyboard: .profile)
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+    }
 }
