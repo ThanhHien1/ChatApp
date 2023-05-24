@@ -17,12 +17,18 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        EditUimageService().addShadowAndRoundCorners(imageView: imageProfile)
         profile()
     }
     
     func profile() {
-        //tfName.text = viewModel.user.name
-        //TfEmail.text = viewModel.user.email
+        viewModel.profile(completed: { [weak self] user in
+            self?.tfName.text = user?.name
+            self?.TfEmail.text = user?.email
+            self?.imageProfile.load(urlString: user?.imageLink ?? "")
+            }, onError: { _ in
+            self.showAlert(title: "Error", message: "k hien thi profile")
+            })
     }
     
     @IBAction func onLogout(_ sender: Any) {
@@ -30,6 +36,11 @@ class ProfileViewController: UIViewController {
         let vc = UIStoryboard.initial(storyboard: .login)
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
+    }
+    
+    
+    @IBAction func back(_ sender: Any) {
+        dismiss(animated: true)
     }
     
 }

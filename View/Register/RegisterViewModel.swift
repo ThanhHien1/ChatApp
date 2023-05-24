@@ -16,11 +16,18 @@ class RegisteViewModel {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if (error != nil) {
                 onError("Error during registration: \(String(describing: error?.localizedDescription))")
-            }  else {
+            } else if image == nil {
+                let user = User(name: name, email: email, password: password)
+                self.saveUser(user: user) {
+                    onCompleted()
+                } onError: { err in
+                    onError("Error during registration: \(String(describing: err))")
+                }
+            } else if image != nil {
                 self.upLoadImage(image) { result in
                     switch result {
                     case .success(let url):
-                        let user = User(name: name, email: email, password: password, imageLink: url.absoluteString)
+                        let user = User( name: name, email: email, password: password, imageLink: url.absoluteString)
                         self.saveUser(user: user) {
                             onCompleted()
                         } onError: { err in
@@ -70,14 +77,13 @@ class RegisteViewModel {
     
     
     func saveUser(user: User, completed: @escaping () -> Void, onError: @escaping (String) -> Void) {
-        let data: [String: Any] = [
-            "id" : user.id,
-            "name": user.name,
-            "email": user.email,
-            "password": user.password,
-            "imageLink": user.imageLink ?? ""
-        ]
-        self.db.collection("User").document(user.id).setData(data, merge: true) { error in
+        guard let userID = Auth.auth().currentUser?.uid else { return }
+        let dataUser = ["id": userID,
+                        "name": user.name,
+                        "email": user.email,
+                        "password": user.password,
+                        "imageLink": user.imageLink ?? ""]
+        self.db.collection("User").document(userID).setData(dataUser, merge: true) { error in
             if let error = error {
                 onError(error.localizedDescription)
             } else {

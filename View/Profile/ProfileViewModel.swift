@@ -8,31 +8,27 @@
 import Foundation
 import FirebaseAuth
 import Firebase
+import FirebaseFirestore
 
 class ProfileModel {
+    var currentUser: User? = nil
     
-    func profile( completion: @escaping (Result<User,Error>) -> Void) {
-        //chưa xong á
-//        let id = Auth.auth().currentUser!.uid
-//        Firestore.firestore().collection("User").document(id).getDocument { document, error in
-//            if let error = error {
-//                completion(.failure(error))
-//                return
-//            }
-//            guard let document = document, document.exists, let data = document.data() else {
-//                let error = NSError(domain: "Invalid user data", code: 0, userInfo: nil)
-//                completion(.failure(error))
-//                return
-//            }
-//            let user = User(
-//                id
-//                name: data["name"] as! String,
-//                email: data["email"] as! String,
-//                password: data["password"] as! String,
-//                imageLink: data["imageLink"] as! String
-//            )
-//            completion(.success(user))
-//        }
+    func profile(completed: @escaping (User?) -> Void, onError: @escaping (String) -> Void) {
+        guard let userID = Auth.auth().currentUser?.uid else { return }
+        let docRef = Firestore.firestore().collection("User").document(userID)
+        docRef.getDocument() { [weak self] (document, error) in
+            guard let self = self else {return}
+            if let document = document, document.exists {
+                let data = document.data()
+                let user = User( name: data?["name"] as? String ?? "" , email: data?["email"] as? String ?? "" , password: data?["password"] as? String ?? "" , imageLink: data?["imageLink"] as? String ?? "")
+                print(user)
+                self.currentUser = user
+                completed(user)
+            } else {
+                onError("error: \(error?.localizedDescription)")
+            }
+        }
+        
     }
     
     func logOut() {

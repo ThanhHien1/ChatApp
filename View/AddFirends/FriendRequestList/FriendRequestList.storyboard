@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Friend Request List View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="FriendRequestListViewController" customModule="Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B4Q-Lk-8Pb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friend request list" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yk5-S7-ZmV">
+                                <rect key="frame" x="16" y="77" width="234" height="36"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="30"/>
+                                <color key="textColor" red="0.12582228149999999" green="0.33716382070000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="5er-sB-BnX">
+                                <rect key="frame" x="176.66666666666666" y="406" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="P5q-Jw-pnq"/>
+                                    <constraint firstAttribute="height" constant="40" id="YJO-Nd-4Yu"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="viU-tm-cKA" customClass="FriendRequestViewController" customModule="Chat">
+                                <rect key="frame" x="0.0" y="121" width="393" height="697"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="15" reuseIdentifier="cellRequest" rowHeight="81" id="El6-pg-QZ1" customClass="FriendRequestCell" customModule="Chat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="81"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="El6-pg-QZ1" id="CRC-Ua-nYY">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="81"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" id="zl1-WC-3tA">
+                                                    <rect key="frame" x="101" y="25" width="143" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X1d-am-hjW">
+                                                    <rect key="frame" x="30" y="10.666666666666664" width="60" height="59.999999999999993"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="Acg-jh-WAz"/>
+                                                        <constraint firstAttribute="width" constant="60" id="XYD-LW-GZh"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZo-ZF-fh0">
+                                                    <rect key="frame" x="253" y="22" width="63" height="35"/>
+                                                    <color key="tintColor" systemColor="systemRedColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="Delete">
+                                                        <backgroundConfiguration key="background">
+                                                            <color key="backgroundColor" systemColor="tintColor"/>
+                                                        </backgroundConfiguration>
+                                                        <fontDescription key="titleFontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="14"/>
+                                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="btDelete:" destination="El6-pg-QZ1" eventType="touchUpInside" id="DiQ-Di-awB"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4EM-44-cYG">
+                                                    <rect key="frame" x="323" y="25.666666666666664" width="64" height="29.666666666666664"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="64" id="7k3-Zc-pbD"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="Accept">
+                                                        <backgroundConfiguration key="background">
+                                                            <color key="backgroundColor" systemColor="tintColor"/>
+                                                        </backgroundConfiguration>
+                                                        <fontDescription key="titleFontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="14"/>
+                                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="btAccept:" destination="El6-pg-QZ1" eventType="touchUpInside" id="gEM-iH-CIe"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="4EM-44-cYG" secondAttribute="trailing" constant="6" id="0gQ-KA-X5e"/>
+                                                <constraint firstItem="SZo-ZF-fh0" firstAttribute="top" secondItem="CRC-Ua-nYY" secondAttribute="topMargin" constant="11" id="Pvj-Zl-taM"/>
+                                                <constraint firstItem="4EM-44-cYG" firstAttribute="centerY" secondItem="CRC-Ua-nYY" secondAttribute="centerY" id="YUK-op-34h"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="SZo-ZF-fh0" secondAttribute="bottom" constant="13" id="ddm-cD-RkI"/>
+                                                <constraint firstItem="4EM-44-cYG" firstAttribute="leading" secondItem="SZo-ZF-fh0" secondAttribute="trailing" constant="7" id="kzK-y7-lzj"/>
+                                                <constraint firstItem="X1d-am-hjW" firstAttribute="centerY" secondItem="CRC-Ua-nYY" secondAttribute="centerY" id="n3Z-cH-jwq"/>
+                                                <constraint firstItem="SZo-ZF-fh0" firstAttribute="leading" secondItem="zl1-WC-3tA" secondAttribute="trailing" constant="9" id="nBd-qc-sQ0"/>
+                                                <constraint firstItem="X1d-am-hjW" firstAttribute="leading" secondItem="CRC-Ua-nYY" secondAttribute="leadingMargin" constant="10" id="zyt-6w-tc4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgsend" destination="X1d-am-hjW" id="OBv-oj-PY8"/>
+                                            <outlet property="lbName" destination="zl1-WC-3tA" id="s2j-W3-HBr"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiJ-5p-Fwv">
+                                <rect key="frame" x="327" y="71.666666666666629" width="50" height="40"/>
+                                <state key="normal" backgroundImage="delete.left" catalog="system"/>
+                                <connections>
+                                    <action selector="back:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="EUC-ga-Kcz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="e5m-kd-RVY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MiJ-5p-Fwv" firstAttribute="trailing" secondItem="B4Q-Lk-8Pb" secondAttribute="trailingMargin" id="77j-U1-Vr9"/>
+                            <constraint firstItem="viU-tm-cKA" firstAttribute="top" secondItem="Yk5-S7-ZmV" secondAttribute="bottom" constant="8" id="SS6-V6-Rec"/>
+                            <constraint firstItem="viU-tm-cKA" firstAttribute="leading" secondItem="e5m-kd-RVY" secondAttribute="leading" id="T0g-oe-vZ8"/>
+                            <constraint firstItem="5er-sB-BnX" firstAttribute="centerY" secondItem="B4Q-Lk-8Pb" secondAttribute="centerY" id="Xci-tm-r3m"/>
+                            <constraint firstItem="Yk5-S7-ZmV" firstAttribute="top" secondItem="e5m-kd-RVY" secondAttribute="top" constant="18" id="cPs-Br-s8b"/>
+                            <constraint firstItem="MiJ-5p-Fwv" firstAttribute="top" secondItem="e5m-kd-RVY" secondAttribute="top" constant="10.999999999999972" id="cng-hL-c44"/>
+                            <constraint firstItem="viU-tm-cKA" firstAttribute="top" secondItem="MiJ-5p-Fwv" secondAttribute="bottom" constant="8.0000000000000284" id="d5d-ey-X4X"/>
+                            <constraint firstItem="5er-sB-BnX" firstAttribute="centerX" secondItem="B4Q-Lk-8Pb" secondAttribute="centerX" id="k7B-Lh-3Db"/>
+                            <constraint firstItem="e5m-kd-RVY" firstAttribute="bottom" secondItem="viU-tm-cKA" secondAttribute="bottom" id="m4A-9A-PDd"/>
+                            <constraint firstItem="MiJ-5p-Fwv" firstAttribute="leading" secondItem="Yk5-S7-ZmV" secondAttribute="trailing" constant="77" id="q9M-16-iCk"/>
+                            <constraint firstItem="e5m-kd-RVY" firstAttribute="trailing" secondItem="viU-tm-cKA" secondAttribute="trailing" id="t8A-D3-u2b"/>
+                            <constraint firstItem="Yk5-S7-ZmV" firstAttribute="leading" secondItem="B4Q-Lk-8Pb" secondAttribute="leadingMargin" id="tiU-Ye-tg9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tbViewSend" destination="viU-tm-cKA" id="azi-ut-XVb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="delete.left" catalog="system" width="128" height="102"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

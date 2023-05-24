@@ -30,12 +30,12 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate 
     }
     
     @IBAction func onRegister(_ sender: Any) {
-        guard let name = tfName.text else {
-            showAlert(title: "Error", message: "Enter name")
+        guard let name = tfName.text, !name.isEmpty else {
+            showAlert(title: "Error", message: "Enter your name")
             return
         }
-        guard let email = tfEmail.text else {
-            showAlert(title: "Error", message: "Enter email")
+        guard let email = tfEmail.text, !email.isEmpty else {
+            showAlert(title: "Error", message: "Enter your email")
             return
         }
         guard let password = tfPassword.text, password.count >= 6 else {
@@ -49,7 +49,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate 
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true)
         }, onError: {_ in
-            self.showAlert(title: "Error", message: "Khong dang ki dc a")
+            self.showAlert(title: "Error", message: "Email invalidate")
         })
     }
 }

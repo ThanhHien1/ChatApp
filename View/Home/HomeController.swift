@@ -27,7 +27,7 @@ class HomeController: UIViewController {
     */
 
     @IBAction func onProfile(_ sender: Any) {
-        let vc = UIStoryboard.initial(storyboard: .profile)
+        let vc = UIStoryboard.initial(storyboard: .convesation)
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }

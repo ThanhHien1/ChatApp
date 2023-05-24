@@ -22,11 +22,12 @@ class LoginController: UIViewController {
     }
     
     @IBAction func onLogin(_ sender: Any) {
-        guard let email = edtEmail.text else {
+        guard let email = edtEmail.text, !email.isEmpty else {
             showAlert(title: "Erorr", message: "Enter your email")
             return
         }
-        guard let password = edtPassword.text else {showAlert(title: "Erorr", message: "Enter your password")
+        guard let password = edtPassword.text, !password.isEmpty else {
+            showAlert(title: "Erorr", message: "Enter your password")
             return
         }
         indicator.isHidden = false
@@ -37,6 +38,7 @@ class LoginController: UIViewController {
             self?.present(vc, animated: true)
         }, onError: { [weak self] in
             self?.indicator.isHidden = true
+            self?.showAlert(title: "Error", message: "Invalid email or password")
             print($0)
         })
     }

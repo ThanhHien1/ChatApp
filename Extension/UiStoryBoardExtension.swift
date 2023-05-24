@@ -28,5 +28,10 @@ extension UIStoryboard {
         case home = "Home"
         case login = "Login"
         case profile = "Profile"
+        case addFirends = "AddFriends"
+        case convesation = "Convensation"
+        case friendRquestListViewController = "FriendRequestList"
+        case FriendList = "FriendList"
+        
     }
 }

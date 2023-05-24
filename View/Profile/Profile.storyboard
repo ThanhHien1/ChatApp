@@ -80,6 +80,9 @@
                                             <constraint firstAttribute="width" constant="25" id="yi8-ZN-6yM"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="delete.left" catalog="system"/>
+                                        <connections>
+                                            <action selector="back:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="BVc-VA-Nc8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="xkt-qP-oyj"/>

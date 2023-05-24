@@ -10,12 +10,12 @@ import FirebaseAuth
 
 class SplashViewModel {
     
-    func initialDataSplash(onMoveToRegister: @escaping () -> Void, onMoveToLogin: @escaping () -> Void){
+    func initialDataSplash(onMoveToHome: @escaping () -> Void, onMovetoLogin: @escaping () -> Void){
         DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
             if Auth.auth().currentUser != nil {
-                onMoveToLogin()
+                onMoveToHome()
             } else {
-                onMoveToRegister()
+                onMovetoLogin()
             }})
     }
 }
